@@ -1,0 +1,54 @@
+<div class="container-header">
+    <header class="header">
+        <nav class="content">
+            <li class="mobile">
+                <i class="fa-solid fa-bars fa-2x icon" onclick="OpenMenu()"></i>
+                <!-- <i class="fa-solid fa-xmark fa-2x"></i> -->
+            </li>
+            <button class="logo">MkDogs</button>
+            <ul>
+                <li class="search">
+                    <form action="/search" class="recherche search-bar" role="search" >
+                        <input type="text" class="search-input" name="q" value="{{ search.terms | escape }}" placeholder="rechercher....">
+                        <div class="icon search-btn">
+                            <i class="fa-solid fa-search"></i>
+                        </div>
+                    </form>
+                    <a href="#">compte</a>
+                </li>
+            </ul>
+            <li class="cart-log">
+                <button class="log"><i class="fa-solid fa-right-to-bracket"></i></button>
+                <button class="cart"><a href="/cart"><i class="fa-solid fa-cart-arrow-down"></i></a></button>
+            </li>
+            <li class="mobile icon-mobile">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-bag-shopping"></i>
+            </li>
+        </nav>
+        <ul class="link">
+            <!-- on boucle sur les differents pages de notre site -->
+            {% for link in linklists.main-menu.links %}
+                <li class="navbar-item"><a href="{{ link.url }}">{{ link.title }}</a></li> 
+            {% endfor %}
+            <li class="cart-log-mobile">
+                <button class="log"><i class="fa-solid fa-right-to-bracket"></i></button>
+                <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+            </li>
+        </ul>
+    </header>
+</div>
+
+{% schema %}
+    {
+        "name" : "Header",
+        "class" :"section-header",
+        "settings" : [
+            {
+                "type":"image_picker",
+                "id": "logo",
+                "label": "logo" 
+            }
+        ]
+    }
+{% endschema %}
