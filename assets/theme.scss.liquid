@@ -164,7 +164,9 @@ a{
 // footer style
 
 .footer{
-    padding: 0 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 30px 20px;
     .newsletter{
         display: flex;
         justify-content: center;
@@ -196,6 +198,13 @@ a{
         h2{
             color: dodgerblue;
         }
+        .logo{
+            width: 300px;
+        }
+        .info i{
+            margin-right: 15px;
+            
+        }
         .content{
             .social{
                 display: flex;
@@ -203,16 +212,38 @@ a{
                     width: 30px;
                     height: 30px;
                     border-radius: 30px;
-                    color: #fff;
-                    background-color: #333;
+                    color: #333;
+                    background-color: #fff;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     cursor: pointer;
+                    transition: all .5s ease;
+                    
                 }
                 .sc{
                     margin-left: 15px;
                 }
+                .fb:hover{
+                    color: #fff;
+                    background-color: $bleue;
+                }
+                .insta:hover{
+                    color: bisque;
+                    background-color: #333;
+                }
+                .twit:hover{
+                    color: #fff;
+                    background-color: $bleue;
+                }
+                .you:hover{
+                    color: #fff;
+                    background-color: rgb(214, 20, 20);
+                }
+                
+            }
+            li{
+                margin-top: 15px;
             }
         }
     }
@@ -225,5 +256,39 @@ a{
         align-items: center;
         padding: 10px;
         color: #aaa;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .footer{
+        .footer-content{
+            flex-wrap: wrap;
+            justify-content: left;
+            
+            .logo{
+                margin-top: 8px;
+                padding-bottom: 20px;
+                border-bottom: 1px dotted #aaa;
+            }
+        }
+        hr{
+            display: none;
+        }
+
+        
+    }
+}
+
+@media screen and (max-width: 500px){
+    .footer{
+        .newsletter{
+            display: inline-block;
+            width: 100%;
+            input, button{
+                width: 100%;
+                margin-top: 8px;
+                margin-left: 0;
+            }
+        }
     }
 }

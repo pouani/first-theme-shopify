@@ -17,3 +17,13 @@ function OpenMenu() {
     
 }
 // fin fonction
+
+//slick carroussel
+    $('.content').slick({
+        autoplay: true,
+        dots: true,
+        infinite: false,
+        speed: 3000,
+        pagination: false
+    });
+//fin slick caroussel
