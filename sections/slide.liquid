@@ -1,0 +1,65 @@
+
+
+<div class="container-slide">
+    <div class="slide">
+
+        {% for block in section.blocks %}
+            <div class="splide">
+                <img src="{{ block.settings.slide | img_url }}" alt="{{ block.settings.slide.alt }} ">
+                <div class="text">
+                <button class="btn">Buy Now</button>
+            </div>
+        {% endfor %}
+          
+            
+        </div>
+        <div class="splide">
+          <img src="/assets/1784.jpg" alt="">
+          <div class="text">
+            <button class="btn">Buy Now</button>
+          </div>
+        </div>
+        <div class="splide">
+          <img src="/assets/47.jpg" alt="">
+          <div class="text">
+            <h2>Learn More About Special More About</h2>
+            <button class="btn">Buy Now</button>
+          </div>
+        </div>
+        <div class="splide">
+          <img src="/assets/product-backdrop-cinematic-smoke-realistic-design.jpg" alt="">
+          <div class="text">  
+            <h2>Actionable Advice Experts More About</h2>
+            <button class="btn">Buy Now</button>
+          </div>
+
+            
+        </div>
+    </div>
+</div>
+
+{% schema %} 
+    {
+        "name":"Slider",
+        "max_blocks":9,
+        "blocks": [
+            {
+            "type":"image",
+            "name":"image",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "slide",
+                    "label": "Image"
+                }
+            ]
+            }
+        ],
+        "presets": [
+            {
+                "name":"Slider", 
+                "category" :"media"
+            }
+        ]
+    }
+{% endschema %}

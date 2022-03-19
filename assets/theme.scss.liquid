@@ -7,6 +7,7 @@ $bleue : dodgerblue;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
@@ -182,6 +183,7 @@ a{
             margin-left: 15px;
         } 
         button{
+            display: block !important;
             width: 100px;
             height: 45px;
             border-radius: 4px;
@@ -199,7 +201,9 @@ a{
             color: dodgerblue;
         }
         .logo{
+            display: block !important;
             width: 300px;
+            text-decoration: none;
         }
         .info i{
             margin-right: 15px;
@@ -259,6 +263,55 @@ a{
     }
 }
 
+
+// style slide 
+.splide {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: inline-block;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    .text{
+        z-index: 1;
+        position: absolute;
+        text-align: left;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 30%;
+        color: white;
+        width: 70%;
+        h2{
+            font-size: 57px;
+            width: 50%;
+        }
+        .btn{
+            width: 320px;
+            height: 45px;
+            border-radius: 8px;
+            font-size: 22px;
+            font-weight: 600;
+            color: #fff;
+            border: 4px solid dodgerblue;
+            display: block !important;
+            transition: all .6s ease;
+        }
+        .btn:hover{
+            background-color: chocolate;
+            border: none;
+        }
+    }
+    
+}
+
+
+button{
+    display: none !important;
+}
+
 @media screen and (max-width: 900px){
     .footer{
         .footer-content{
@@ -289,6 +342,22 @@ a{
                 margin-top: 8px;
                 margin-left: 0;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1045px) {
+    .slide{
+        .splide{
+          .text{
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+            text-align: center;
+            top: 30%;
+            width: 100% !important;
+            background-color: #7B61FF;
+          }
         }
     }
 }

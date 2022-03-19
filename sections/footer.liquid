@@ -20,8 +20,10 @@
 
     <div class="newsletter">
         <h2>Newsletter</h2>
-        <input type="text" placeholder="votre email">
-        <button class="btn">Subscribe</button>
+        {% form 'customer' %}
+            <input type="text" name="contact[email]" placeholder="votre email" id="Email">
+            <button class="btn" type="submit" name="contact[tags]" >Subscribe</button>
+        {% endform %}
     </div>
     <div class="footer-content">
         <div class="logo">
